@@ -1,6 +1,6 @@
 # random_color
 
-A new Flutter project.
+Test task for Solid Software.
 
 ## Getting Started
 

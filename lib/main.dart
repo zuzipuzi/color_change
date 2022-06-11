@@ -31,8 +31,8 @@ class ColorChangeScreen extends StatefulWidget {
 
 class _ColorChangeScreenState extends State<ColorChangeScreen> {
   final Random _random = Random();
-  Color _color = Color(0xFFFFFFFF);
-  Color _colorText = Color(0xFF000000);
+  Color _backgroundColor = Color(0xFFFFFFFF);
+  Color _textColor = Color(0xFF000000);
 
   @override
   Widget build(BuildContext context) {
@@ -46,11 +46,11 @@ class _ColorChangeScreenState extends State<ColorChangeScreen> {
         child: GestureDetector(
           onTap: _changeColor,
           child: Container(
-            color: _color,
+            color: _backgroundColor,
             child: Center(
               child: Text(
                 "Hey there",
-                style: TextStyle(fontSize: 30, color: _colorText),
+                style: TextStyle(fontSize: 30, color: _textColor),
               ),
             ),
           ),
@@ -61,13 +61,13 @@ class _ColorChangeScreenState extends State<ColorChangeScreen> {
 
   void _changeColor() {
     setState(() {
-      _color = Color.fromRGBO(
+      _backgroundColor = Color.fromRGBO(
         _random.nextInt(256),
         _random.nextInt(256),
         _random.nextInt(256),
         (1.0),
       );
-      _colorText = Color.fromRGBO(
+      _textColor = Color.fromRGBO(
         _random.nextInt(256),
         _random.nextInt(256),
         _random.nextInt(256),
